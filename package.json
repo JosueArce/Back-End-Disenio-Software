@@ -1,0 +1,16 @@
+{
+  "name": "backendsideclient",
+  "version": "1.0.0",
+  "description": "Back-End client side with NodeJS and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josue Arce",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}
