@@ -21,7 +21,7 @@ connectionString.getConnection(function (err, connection) {
     else
         console.log("Conectado a la Base de Datos");
 });
-app.get('/timestamp', function (request, response) {
+app.get('/', function (request, response) {
     connectionString.query("Select * from canton", function (error, rows, fields) {
         if (error) {
             console.log("Error al extraer datos!");
@@ -31,6 +31,6 @@ app.get('/timestamp', function (request, response) {
     });
 });
 
-http.listen(PORT,function(){
+app.listen(PORT,function(){
 	console.log("App running on port ",PORT);
 });
