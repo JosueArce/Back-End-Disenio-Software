@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const http = require('http');
 const PORT = process.env.PORT || 5000;
 const app = express();
 //Middleware
@@ -30,6 +31,6 @@ app.get('/timestamp', function (request, response) {
     });
 });
 
-app.listen(PORT,function(){
+http.listen(PORT,function(){
 	console.log("App running on port ",PORT);
 });
