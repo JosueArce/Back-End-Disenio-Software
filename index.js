@@ -1,8 +1,12 @@
 const express = require('express');
 const mysql = require('mysql');
+const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const app = express();
 //app.use(express.logger());
+
+//Middleware
+app.use(cors());
 
 const connectionString = mysql.createPool({
 	//db connection details
@@ -18,7 +22,7 @@ connectionString.getConnection(function(err,connection){
 	else console.log("Conectado a la Base de Datos");
 });
 
-app.get('/test',function(request,response){
+app.get('/',function(request,response){
 	connectionString.query("Select * from canton",function(error,rows,fields){
 		if(error) 
 		{
@@ -28,4 +32,5 @@ app.get('/test',function(request,response){
 		response.send(rows);
 	});
 });
+
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
