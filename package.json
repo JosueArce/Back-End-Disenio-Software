@@ -1,20 +1,27 @@
 {
-  "name": "backendsideclient",
+  "name": "back-end-disenio-software",
   "version": "1.0.0",
-  "description": "Back-End client side with NodeJS and MySQL",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start":"node index.js"
+  },
+  "engines":{
+    "node":"0.4.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xRaGeX/Back-End-Disenio-Software.git"
   },
   "author": "Josue Arce",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xRaGeX/Back-End-Disenio-Software/issues"
+  },
+  "homepage": "https://github.com/xRaGeX/Back-End-Disenio-Software#readme",
   "dependencies": {
-    "cors": "^2.8.4",
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "mysql": "^2.15.0"
-  },
-  "engines": {
-    "node": "0.12.7"
   }
 }
