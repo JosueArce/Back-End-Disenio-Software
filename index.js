@@ -22,12 +22,13 @@ connectionString.getConnection(function (err, connection) {
         console.log("Conectado a la Base de Datos");
 });
 app.get('/', function (request, response) {
-    connectionString.query("Select * from canton", function (error, rows, fields) {
+    /*connectionString.query("Select * from canton", function (error, rows, fields) {
         if (error) {
             console.log("Error al extraer datos!");
             throw error;
         }
-        response.send(rows);
+        response.send(rows);*/
+		response.send("test");
     });
 });
 
