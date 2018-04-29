@@ -14,14 +14,13 @@ const connectionString = mysql.createPool({
     password: 'd59ed826',
     database: 'heroku_373b41bf2fad8f1'
 });
-const test = connectionString.getConnection(function (err, connection) {
+connectionString.getConnection(function (err, connection) {
     if (err)
         console.log("Error: ", err);
     else
         console.log("Conectado a la Base de Datos");
 });
 app.get('/timestamp', function (request, response) {
-    test();
     connectionString.query("Select * from canton", function (error, rows, fields) {
         if (error) {
             console.log("Error al extraer datos!");
@@ -29,7 +28,6 @@ app.get('/timestamp', function (request, response) {
         }
         response.send(rows);
     });
-    //response.send("ASDSKAJHDJKAHDKAJ");
 });
 
 app.listen(PORT,function(){
